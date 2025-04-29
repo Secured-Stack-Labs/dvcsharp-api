@@ -36,8 +36,8 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
   
-      #- name: Build the solution
-      #  run: dotnet build --no-restore --configuration Release
+      - name: Build the solution
+        run: dotnet build --no-restore --configuration Release
 
       - name: Run SLS Scanner
         uses: tauruseer/sls-pipeline-scanner@v1.2.1
