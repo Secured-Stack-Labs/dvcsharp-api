@@ -28,17 +28,6 @@ jobs:
       # Fetch project source with GitHub Actions Checkout.
       - uses: actions/checkout@v4
 
-      - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-  
-      - name: Restore dependencies
-        run: dotnet restore
-  
-      - name: Build the solution
-        run: dotnet build --no-restore --configuration Release
-
       - name: Run SLS Scanner
         uses: tauruseer/sls-pipeline-scanner@v1.2.1
         with:
